@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сервіс замовлення сайтів та конспектів</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🚀 Сервіс замовлення</h1>
+        <nav>
+            <ul>
+                <li><a href="#services">Послуги</a></li>
+                <li><a href="#order">Замовити</a></li>
+                <li><button id="authBtn" class="auth-button">Увійти / Зареєструватися</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h2>Замовте сайт, конспекти або інші послуги</h2>
+            <p>Професійна розробка за доступними цінами</p>
+        </section>
+
+        <section id="services">
+            <h2>Наші послуги</h2>
+            <div class="services-list">
+                <div class="service-item">
+                    <h3>🤖 ТГ моди</h3>
+                    <p>Aiogram, ExtraGram - розробка ботів</p>
+                    <p class="price">від 300 грн</p>
+                </div>
+                <div class="service-item">
+                    <h3>🖥️ Софти</h3>
+                    <p>Brawl Stars, Roblox - розробка софту</p>
+                    <p class="price">від 200 грн</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Детальні описи послуг -->
+        <section id="services-details">
+            <h2>Детальніше про послуги</h2>
+            
+            <div class="service-detail">
+                <h3>🤖 ТГ моди (Aiogram, ExtraGram)</h3>
+                <ul>
+                    <li>Telegram боти на Aiogram</li>
+                    <li>Telegram боти на ExtraGram</li>
+                    <li>Адмін-панелі для ботів</li>
+                    <li>Інтеграція з API</li>
+                    <li>Автоматизація процесів</li>
+                    <li>Платіжні системи в ботів</li>
+                </ul>
+            </div>
+
+            <div class="service-detail">
+                <h3>🖥️ Софти (Brawl Stars, Roblox)</h3>
+                <ul>
+                    <li>Моди для Brawl Stars</li>
+                    <li>Скрипти для Roblox</li>
+                    <li>Чіти та утиліти</li>
+                    <li>Автоматизація геймплею</li>
+                    <li>Інструменти для модифікації ігор</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="order">
+            <h2>Як замовити</h2>
+            <div class="telegram-order">
+                <p>📱 Для замовлення напишіть в Telegram:</p>
+                <a href="https://t.me/nonamesoficial" target="_blank" class="telegram-button">@nonamesoficial</a>
+                <p>Опишіть ваше завдання, і ми зв'яжемося з вами найближчим часом!</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Сервіс замовлення. Всі права захищені.</p>
+    </footer>
+
+    <!-- Модальне вікно авторизації -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAuthModal()">&times;</span>
+            <div class="auth-tabs">
+                <button class="tab-btn active" data-tab="login">Увійти</button>
+                <button class="tab-btn" data-tab="register">Зареєструватися</button>
+            </div>
+            
+            <!-- Форма входу -->
+            <form id="loginForm" class="auth-form">
+                <h2>Вхід</h2>
+                <div class="form-group">
+                    <label for="loginEmail">Email:</label>
+                    <input type="email" id="loginEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Пароль:</label>
+                    <input type="password" id="loginPassword" name="password" required>
+                </div>
+                <button type="submit">Увійти</button>
+                <div id="loginStatus"></div>
+            </form>
+            
+            <!-- Форма реєстрації -->
+            <form id="registerForm" class="auth-form" style="display: none;">
+                <h2>Реєстрація</h2>
+                <div class="form-group">
+                    <label for="registerEmail">Email:</label>
+                    <input type="email" id="registerEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Пароль:</label>
+                    <input type="password" id="registerPassword" name="password" required minlength="6">
+                </div>
+                <div class="form-group">
+                    <label for="registerPasswordConfirm">Підтвердити пароль:</label>
+                    <input type="password" id="registerPasswordConfirm" name="passwordConfirm" required minlength="6">
+                </div>
+                <button type="submit">Зареєструватися</button>
+                <div id="registerStatus"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
